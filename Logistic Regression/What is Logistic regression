@@ -1,5 +1,30 @@
+Classification:
+        -- To attempt classification, one method is to use linear regression and map all predictions greater than 0.5 as a 1
+           and all less than 0.5 as a 0. However, this method doesn't work well because classification is not actually a linear function.
+        --The classification problem is just like the regression problem, except that the values we now want to predict take on only a 
+          small number of discrete values. For now, we will focus on the binary classification problem in which y can take on only two values,
+          0 and 1.(Most of what we say here will also generalize to the multiple-class case.) For instance, if we are trying to build a spam 
+          classifier for email, then x^{(i)} x (i)   may be some features of a piece of email, and y may be 1 if it is a piece of spam mail, and 0 otherwise. 
+          Hence, y∈{0,1}. 0 is also called the negative class, and 1 the positive class, and they are sometimes 
+          also denoted by the symbols “-” and “+.” Given x^{(i)}x (i)  , the corresponding y^{(i)}y  (i)   is also called the label 
+          for the training example.
+
+
 Logistic regression:
 
 What is logistic Regresssion?
-        - It is the classification problem.
-        - Here the output variable is discrete outcomes like  y ∈ {0, 1}
+        - It is the classification problem whhich is one of the most popular and widely used algorithm in machine learning.
+        - Here the output variable we want to predict is the discrete outcomes eg:  y ∈ {0, 1}
+        - Some Example:
+                -- Email classification: (Spam/Not Spam)
+                -- Online Transaction : Fraud(Yes/No)
+                -- Tumour: Malignant/Benign ?
+        - Linear Regression is not often good idea for the classification problem.
+                For example lets say in classification we have the output variable y will be the discrete outcomes y ∈ {0, 1} 
+                but in linear regression the h(x) value can be 1> or <0
+ 
+ Hypothesis funtion:
+     Hypothesis representaion is that what is the function we are going to represent our hypothesis when we have a classification problem.
+     we want our regression model would be 0=<h(x)=<1
+     In linear regression the hypothesis function rep (θ^T)X but in logistic g((θ^T)X) --> g(Theta Transpose * X) .
+     This is rep as Sigmoid function g(z)=1/(1+e^(-z))
